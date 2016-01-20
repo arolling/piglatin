@@ -48,9 +48,9 @@ $(document).ready(function() {
     var latinWord = sentenceHandler(word);
     console.log(latinWord);
 
-    var latinPhrase = latinWord.toString().replace(",", " ");
+    var latinPhrase = latinWord.toString().replace(/,/g, " ");
     console.log(latinPhrase);
-    $("#translatedText").text(latinWord);
+    $("#translatedText").text(latinPhrase);
 
   });
 });
