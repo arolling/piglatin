@@ -15,5 +15,15 @@ describe("pigLatin", function () {
     expect(pigLatin("squash")).to.equal("ashsquay");
   });
 
+});
+
+describe("sentenceHandler", function() {
+  // it("will split a sentence into separate words", function() {
+  //   expect(sentenceHandler("Hi my name is")).to.eql(["Hi", "my", "name", "is"]);
+  // });
+
+  it("will Latinize each separate word", function() {
+    expect(sentenceHandler("Hi our name is")).to.eql(["iHay", "ouray", "amenay", "isay"]);
+  });
 
 });

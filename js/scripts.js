@@ -26,6 +26,17 @@ var findVowel = function(word) {
     }
   }
 }
+
+var sentenceHandler = function(sentence) {
+  var latinArray = [];
+  var wordArray = sentence.split(" ");
+  for (var i=0; i < wordArray.length; i++) {
+    var latinWord = pigLatin(wordArray[i]);
+    latinArray.push(latinWord);
+  }
+  return latinArray;
+}
+
 // END BUSINESS LOGIC
 
 $(document).ready(function() {
@@ -34,9 +45,11 @@ $(document).ready(function() {
     var word = $("input#latinInput").val();
     console.log(word)
 
-    var latinWord = pigLatin(word);
+    var latinWord = sentenceHandler(word);
     console.log(latinWord);
 
+    var latinPhrase = latinWord.toString().replace(",", " ");
+    console.log(latinPhrase);
     $("#translatedText").text(latinWord);
 
   });
