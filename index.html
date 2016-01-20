@@ -3,12 +3,38 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"  crossorigin="anonymous">
-    <link rel="stylesheet" href="css/scripts.css" media="screen" title="no title" charset="utf-8">
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Pig Latin</title>
   </head>
   <body>
+    <!-- Header -->
+    <div class="container">
+      <h1>Pig Latinizer</h1>
+    <!-- End Header -->
+
+
+    <!-- Input form -->
+      <form id="inputForm">
+        <div class="form-group">
+          <label for="inputText">Input Text for translation</label>
+          <input type="text" id="latinInput">
+        </div>
+        <button type="submit" class="btn btn-danger">Submit</button>
+      </form>
+    <!-- End input form -->
+
+
+    <!-- Output area -->
+      <div class="output">
+        <h2>In Pig Latin, you said:</h2>
+        <h3><span id="translatedText"></span></h3>
+      </div>
+    <!-- End output area -->
+
+
+    </div>
 
   </body>
 </html>
