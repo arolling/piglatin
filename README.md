@@ -11,7 +11,7 @@ The user inputs a word or sentence and the program takes that data and translate
 
 ## Known Bugs
 
-Currently doesn't handle punctuation well. Additionally, does not handle words without vowels.
+Currently doesn't handle punctuation well. If user input uses non-standard capitalization, non-standard behavior occurs.
 
 
 ## Technologies Used

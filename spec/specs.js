@@ -15,6 +15,10 @@ describe("pigLatin", function () {
     expect(pigLatin("squash")).to.equal("ashsquay");
   });
 
+  it("will translate vowel-less words", function () {
+    expect(pigLatin("rhythm")).to.equal("ythmrhay");
+  });
+
 });
 
 describe("sentenceHandler", function() {
