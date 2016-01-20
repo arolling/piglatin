@@ -1,10 +1,10 @@
 describe("pigLatin", function () {
   it("will add ay at the end of a word beginning with a vowel", function() {
-    expect(pigLatin("Assert")).to.equal("Assertay");
+    expect(pigLatin("equate")).to.equal("equateay");
   });
 
   it("will move the first consonant to the end of the word before adding ay", function() {
-    expect(pigLatin("word")).to.equal("ordway");
+    expect(pigLatin("subsequent")).to.equal("ubsequentsay");
   });
 
   it("will move the first group of consonants", function() {
@@ -12,7 +12,7 @@ describe("pigLatin", function () {
   });
 
   it("will include u when moving q", function() {
-    expect(pigLatin("quash")).to.equal("ashquay");
+    expect(pigLatin("squash")).to.equal("ashsquay");
   });
 
 

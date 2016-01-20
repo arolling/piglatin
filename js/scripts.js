@@ -4,7 +4,7 @@ var pigLatin = function(word) {
   var firstLetter = word.slice(0, position);
   var word = word.slice(position);
   word += firstLetter;
-  console.log(word);
+  console.log(position);
   return word + 'ay';
 }
 
@@ -14,9 +14,14 @@ var findVowel = function(word) {
     for (var i = 0; i < 11; i++) {
       var vowel = word.startsWith(vowels[i], position);
       if (vowel === true) {
-        
-        console.log(vowel, position, word);
-        return position;
+        console.log(vowels[i]);
+        if (vowels[i] === "u" && word.charAt(position-1) === "q") {
+          console.log(i, position, word);
+          return position + 1;
+        } else {
+          console.log(vowel, position, word);
+          return position;
+        }
       }
     }
   }
